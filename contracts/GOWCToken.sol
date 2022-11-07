@@ -12,14 +12,14 @@ interface AntiBot {
     ) external returns (uint256);
 }
 
-contract GOToken is ERC20Burnable, Ownable {
+contract GOWCToken is ERC20Burnable, Ownable {
     AntiBot public ab;
     bool public abEnabled;
 
     uint256 private constant INITIAL_SUPPLY = 1000 * 10**(6 + 18); // 1B tokens
     address private _devAddress;
 
-    constructor() ERC20("GO Token", "GO") {
+    constructor() ERC20("GO WorldCup", "GOWC") {
         _mint(_msgSender(), INITIAL_SUPPLY);
         _devAddress = _msgSender();
     }
